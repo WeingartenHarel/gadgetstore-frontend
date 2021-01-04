@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
+import Homepage from './components/Homepage/Homepage';
 
 function App() {
   return (
@@ -18,6 +20,12 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <Router>
+        <Switch>
+          <Route path="/" component={ Homepage } />
+        </Switch>
+      </Router>
     </div>
   );
 }

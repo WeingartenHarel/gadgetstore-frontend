@@ -4,7 +4,6 @@ import styles from './Productlist.module.scss';
 
 const Productlist = ({products}) => (
   <div className={styles.Productlist}>
-    Productlist Component
     <ul>
       <li>
         {

@@ -8,7 +8,7 @@ export const productService = {
 }
 const BASE_URL = process.env.NODE_ENV === 'production'
   ? '/api/'
-  : '//localhost:3030/api/products'
+  : '//localhost:3030/api/product'
 
 
 async function getProducts(filterBy = null) {

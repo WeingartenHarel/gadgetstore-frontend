@@ -21,17 +21,17 @@ export default class HomePage extends React.Component {
   }
   async loadProducts() {
     const products = await productService.getProducts()
-    console.log(products);
+    console.log(products,'products');
     this.setState({ products })
   }
 
-  // products={products}
   render() {
     const { products } = this.state
     return (
       <div className="home-page">
         { products &&
-          <Productlist products={products}></Productlist>
+          <h1>harel ya zain</h1>
+          // <Productlist products={products}></Productlist>
         }
       </div>
     )

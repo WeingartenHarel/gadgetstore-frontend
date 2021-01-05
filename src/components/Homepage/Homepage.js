@@ -7,8 +7,6 @@ import { productService } from '../../services/productService.js'
 
 export default class HomePage extends React.Component {
 
-  
-
   state = {
     //user: null,
     products: null,

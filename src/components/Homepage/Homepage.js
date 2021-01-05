@@ -7,6 +7,8 @@ import Productlist from './../Productlist/Productlist';
 
 export default class HomePage extends React.Component {
 
+  
+
   state = {
     //user: null,
     products:[

@@ -1,8 +1,15 @@
+import axios from 'axios'
+export const productService = {
+  getProducts,
+  getProductById,
+  deleteProduct,
+  updateProduct,
+  addProduct,
+}
 const BASE_URL = process.env.NODE_ENV === 'production'
   ? '/api/'
   : '//localhost:3030/api/products'
 
-import axios from 'axios'
 
 async function getProducts(filterBy = null) {
   const res = await axios.get(BASE_URL)
@@ -27,6 +34,7 @@ async function addProduct(product) {
   const res = await axios.post(`${BASE_URL}/${product._id}`,product)
   return res.data
 }
+
 
 
 // function getEmptyProduct() {
@@ -54,14 +62,6 @@ async function addProduct(product) {
 //   }
 //   return txt
 // }
-
-export const contactService = {
-  getProducts,
-  getProductById,
-  deleteProduct,
-  updateProduct,
-  addProduct,
-}
 
 
 // function sort(arr) {

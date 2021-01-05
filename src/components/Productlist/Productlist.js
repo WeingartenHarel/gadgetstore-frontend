@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import styles from './Productlist.module.scss';
 
 const Productlist = ({products}) => (
@@ -8,7 +8,7 @@ const Productlist = ({products}) => (
     <ul>
       <li>
         {
-      products.map((product) => <span>{product.name}</span>)
+        products.map((product) => <span>{product.name}</span>)
          }
       </li>
     </ul>

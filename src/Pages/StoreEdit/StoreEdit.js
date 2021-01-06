@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { storeService } from '../../services/storeService';
 import { addStore, updateStore } from '../../store/actions/storeActions'
-import './ProductEdit.module.scss';
+import './StoreEdit.module.scss';
 
-class _ProductEdit extends React.Component {
+class _StoreEdit extends React.Component {
   state = {
     store: {
       name: '',
@@ -74,4 +74,4 @@ const mapDispatchToProp = {
   updateStore
 }
 
-export const ProductEdit = connect(null, mapDispatchToProp)(_ProductEdit)
+export const StoreEdit = connect(null, mapDispatchToProp)(_StoreEdit)

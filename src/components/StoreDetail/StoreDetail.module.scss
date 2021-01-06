@@ -1,0 +1,50 @@
+.StoreDetailMain{
+
+    .StoreDetail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2{
+            font-size: 2em;
+        }
+        .span{
+                
+        }  
+        ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+           
+                    li{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        list-style: none;
+                        background-color: antiquewhite;
+                        padding: 10px;
+                        width: 400px;
+                        min-height: 470px;
+                        .store{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+
+                            span{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            .image{
+                                width: 200px;
+                                height: 200px;
+                            }
+                    }
+                }
+         }
+    }
+}

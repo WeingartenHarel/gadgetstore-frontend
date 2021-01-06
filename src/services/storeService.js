@@ -7,7 +7,7 @@ export const storeService = {
   addStore,
   getEmptyStore
 }
-const BASE_URL = process.env.NODE_ENV === 'storeion'
+const BASE_URL = process.env.NODE_ENV === 'production'
   ? '/api/'
   : '//localhost:3030/api/store'
 

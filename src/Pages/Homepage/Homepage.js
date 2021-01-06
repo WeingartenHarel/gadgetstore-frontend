@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Homepage.module.scss';
-import Productlist from '../../components/Productlist/Productlist';
+import { Productlist } from '../../components/Productlist/Productlist';
 import { productService } from '../../services/productService.js'
 
 

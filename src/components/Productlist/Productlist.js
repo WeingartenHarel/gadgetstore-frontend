@@ -3,7 +3,7 @@ import ProductPreview from '../ProductPreview/ProductPreview';
 // import PropTypes from 'prop-types';
 import styles from './Productlist.module.scss';
 
-const Productlist = ({products}) => (
+export const Productlist = ({products}) => (
   <div className={styles.Productlist}>
     <ul>
          {

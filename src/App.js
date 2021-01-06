@@ -3,7 +3,10 @@ import './App.css';
 import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import Homepage from './Pages/Homepage/Homepage';
 import AppHeader from './components/AppHeader/AppHeader'
+import ProductEdit from './Pages/ProductEdit/ProductEdit';
+
 function App() {
+
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -12,6 +15,7 @@ function App() {
       <AppHeader />
       <Router>
         <Switch>
+          <Route path="/store/edit/:id?" component={ProductEdit} />
           <Route path="/" component={Homepage} />
         </Switch>
       </Router>

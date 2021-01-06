@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Homepage.module.scss';
+import './Homepage.module.scss';
 import { Productlist } from '../../components/Productlist/Productlist';
-import { productService } from '../../services/productService.js'
+import { productService } from '../../services/storeService.js'
 
 
 export default class HomePage extends React.Component {
@@ -29,7 +29,6 @@ export default class HomePage extends React.Component {
       <div className="home-page">
         { products &&
         <div className="products-section">
-          <h1>Eylon ya zevel Ofot</h1>
           <Productlist stores={products}></Productlist>
         </div>
         }
@@ -37,6 +36,4 @@ export default class HomePage extends React.Component {
     )
   }
 }
-// Homepage.propTypes = {};
 
-// Homepage.defaultProps = {};

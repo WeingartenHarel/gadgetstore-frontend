@@ -1,49 +1,52 @@
 import axios from 'axios'
-export const productService = {
-  getProducts,
-  getProductById,
-  deleteProduct,
-  updateProduct,
-  addProduct,
+export const storeService = {
+  getStores,
+  getStoreById,
+  deleteStore,
+  updateStore,
+  addStore,
+  getEmptyStore
 }
-const BASE_URL = process.env.NODE_ENV === 'production'
+const BASE_URL = process.env.NODE_ENV === 'storeion'
   ? '/api/'
-  : '//localhost:3030/api/product'
+  : '//localhost:3030/api/store'
 
 
-async function getProducts(filterBy = null) {
+async function getStores(filterBy = null) {
   const res = await axios.get(BASE_URL)
   return res.data
 }
 
-async function getProductById(productId) {
-  const res = await axios.get(`${BASE_URL}/${productId}`)
+async function getStoreById(storeId) {
+  const res = await axios.get(`${BASE_URL}/${storeId}`)
   return res.data
 }
 
-async function deleteProduct(productId) {
-  return await axios.delete(`${BASE_URL}/${productId}`)
+async function deleteStore(storeId) {
+  return await axios.delete(`${BASE_URL}/${storeId}`)
 }
 
-async function updateProduct(product) {
-  const res = await axios.put(`${BASE_URL}/${product._id}`,product)
+async function updateStore(store) {
+  const res = await axios.put(`${BASE_URL}/${store._id}`,store)
   return res.data
 }
 
-async function addProduct(product) {
-  const res = await axios.post(`${BASE_URL}/${product._id}`,product)
+async function addStore(store) {
+  const res = await axios.post(`${BASE_URL}/${store._id}`,store)
   return res.data
 }
 
-
-
-// function getEmptyProduct() {
-//   return {
-//     name: '',
-//     email: '',
-//     phone: ''
-//   }
-// }
+function getEmptyStore() {
+  return {
+    name:'',
+    description:'',
+    imgURL:'https://res.cloudinary.com/hw-projects/image/upload/v1609953788/gadgetStore/defalutlogo.jpg',
+    createdBy:'',
+    createdDate: Date.now(),
+    tags:[],
+    products:[]
+  }
+}
 
 // function filter (term) {
 //   term = term.toLocaleLowerCase()

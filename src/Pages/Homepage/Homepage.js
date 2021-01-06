@@ -30,7 +30,7 @@ export default class HomePage extends React.Component {
         { products &&
         <div className="products-section">
           <h1>Eylon ya zevel Ofot</h1>
-          <Productlist products={products}></Productlist>
+          <Productlist stores={products}></Productlist>
         </div>
         }
       </div>

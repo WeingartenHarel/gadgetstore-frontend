@@ -19,7 +19,43 @@
             width: 300px;
             height: 300px;
 
-       
+            .store{
+
+                justify-content: center;
+                position: relative;
+
+                .storeIMG{
+                    height: 300px;
+                    width: 300px;
+                    position: absolute;
+                    z-index: 0;
+                }
+                .text{
+                    z-index:1;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 12px;
+                    span{
+                        background-color: antiquewhite;
+                        font-size: 2em;
+                    }
+                }
+                .thumb{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 300px;
+                    width: 300px;
+                }
+            }
+            .info{
+                position: relative;
+                bottom: -20px;
+                display: flex;
+                justify-content: space-between;
+            }
         }
     }
 }

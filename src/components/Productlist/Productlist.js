@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductPreview from '../ProductPreview/ProductPreview';
 // import PropTypes from 'prop-types';
 import styles from './Productlist.module.scss';
 
@@ -12,8 +13,4 @@ const Productlist = ({products}) => (
   </div>
 );
 
-Productlist.propTypes = {};
 
-Productlist.defaultProps = {};
-
-export default Productlist;

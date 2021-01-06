@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Homepage.module.scss';
-import Productlist from '../Productlist/Productlist';
+import Productlist from '../../components/Productlist/Productlist';
 import { productService } from '../../services/productService.js'
 
 
 export default class HomePage extends React.Component {
-
-  
 
   state = {
     //user: null,

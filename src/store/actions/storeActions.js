@@ -1,4 +1,4 @@
-import storeService from '../../services/storeService'
+import { storeService } from '../../services/storeService'
 
 // Action Dispatcher 
 export function loadStores(filterBy) {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import styles from './StoreDetail.module.scss';
-import { productService } from '../../services/productService.js'
+import { storeService } from '../../services/storeService.js'
 
 export class StoreDetail extends Component {
   
@@ -11,7 +11,7 @@ export class StoreDetail extends Component {
 
   async componentDidMount(){
     console.log('this.props.match.params.id',this.props.match.params.id)
-    const store = await productService.getProductById(this.props.match.params.id)
+    const store = await storeService.getStoreById(this.props.match.params.id)
     this.setState({ store }) 
     console.log('contact ',this.state )
   }

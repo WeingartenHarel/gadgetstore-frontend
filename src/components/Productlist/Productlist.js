@@ -10,7 +10,7 @@ export const Productlist = ({stores}) => (
          { 
             stores.map( (store ,index) => 
             <Link to={`/store/details/${store._id}`}>
-              <li key={index}>
+              <li key={store.id}>
                 <div className={styles.store}>
                   <div className={styles.storeIMG} className={styles.thumb}>
                     <img className={styles.storeIMG} src={store.imgURL}></img>

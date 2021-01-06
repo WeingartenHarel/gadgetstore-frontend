@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Homepage.module.scss';
 import { Productlist } from '../../components/Productlist/Productlist';
-import { productService } from '../../services/storeService.js'
+import { storeService } from '../../services/storeService.js'
 
 
 export default class HomePage extends React.Component {
@@ -18,7 +18,7 @@ export default class HomePage extends React.Component {
     this.loadProducts()
   }
   async loadProducts() {
-    const products = await productService.getProducts()
+    const products = await storeService.getStores()
     console.log(products,'products');
     this.setState({ products })
   }

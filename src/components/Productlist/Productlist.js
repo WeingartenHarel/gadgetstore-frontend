@@ -5,11 +5,9 @@ import styles from './Productlist.module.scss';
 const Productlist = ({products}) => (
   <div className={styles.Productlist}>
     <ul>
-      <li>
-        {
-        products.map((product) => <span>{product.name}</span>)
+         {
+        products.map( (product ,index) => <li key={index}>{product.displayName}</li> )
          }
-      </li>
     </ul>
   </div>
 );

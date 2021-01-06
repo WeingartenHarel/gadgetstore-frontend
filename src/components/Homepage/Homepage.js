@@ -30,8 +30,10 @@ export default class HomePage extends React.Component {
     return (
       <div className="home-page">
         { products &&
-          <h1>harel ya zain</h1>
-          // <Productlist products={products}></Productlist>
+        <div className="products-section">
+          <h1>Eylon ya zevel Ofot</h1>
+          <Productlist products={products}></Productlist>
+        </div>
         }
       </div>
     )

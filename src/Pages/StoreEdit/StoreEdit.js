@@ -34,9 +34,10 @@ class _StoreEdit extends Component {
 
   onSaveStore = async (ev) => {
     ev.preventDefault()
-    const store = this.state
-    if (store.name || store.description || store.createdBy) {
-      return this.prevState({ errMsg: 'Please fill the fields above' })
+    const { store } = this.state
+    console.log('store', store);
+    if (!store.name || !store.description || !store.createdBy) {
+      return this.setState({ errMsg: 'Please fill the fields above' })
     }
     if (store._id) await this.props.updateStore(store)
     else await this.props.addStore(store)
@@ -49,20 +50,23 @@ class _StoreEdit extends Component {
     const { name, description, imgURL, createdBy, createdDate, tags, products } = this.state.store
     return (
       <form onSubmit={this.onSaveStore} className="store-edit flex">
-        <label>Name:</label>
-        <input type="text" name="name" value={name} onChange={this.handleChange} />
-        <label>Description:</label>
-        <input type="text" name="description" value={description} onChange={this.handleChange} />
-        <label>Store img:</label>
-        <img src="" alt="" />
-        <label>Created by:</label>
-        <input type="text" name="createdBy" value={createdBy} onChange={this.handleChange} />
-        <label>Created At:</label>
-        <span>{createdDate}</span>
-        <label>Tags:</label>
-        <label>Products:</label>
-
-        <button>Create Store</button>
+        <section className="store-info flex">
+          <label>Name:</label>
+          <input type="text" name="name" value={name} onChange={this.handleChange} />
+          <label>Description:</label>
+          <input type="text" name="description" value={description} onChange={this.handleChange} />
+          <label>Created by:</label>
+          <input type="text" name="createdBy" value={createdBy} onChange={this.handleChange} />
+          <label>Created At:</label>
+          <span>{createdDate}</span>
+          <label>Tags:</label>
+          <label>Products:</label>
+          <button>Create Store</button>
+        </section>
+        <section className="store-img">
+          <label>Store img:</label>
+          <img src="" />
+        </section>
         <span>{errMsg}</span>
       </form>
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
-import './AppHeader.module.scss';
+import './AppHeader.scss';
 
-export default function Productlist() {
+export default function AppHeader() {
   return (
     <div className="app-header flex">
       <section className="logo">

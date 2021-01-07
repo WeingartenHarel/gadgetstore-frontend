@@ -4,7 +4,7 @@ import styles from './StoreDetail.module.scss';
 import { storeService } from '../../services/storeService.js'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { loadStores} from '../../store/actions/storeActions'
+import { loadStores } from '../../store/actions/storeActions'
 
 class _storeDetail extends Component {
   

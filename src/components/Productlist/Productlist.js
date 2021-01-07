@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductPreview from '../ProductPreview/ProductPreview';
+// import ProductPreview from '../ProductPreview/ProductPreview';
 // import PropTypes from 'prop-types';
 import styles from './Productlist.module.scss';
 import { Link } from 'react-router-dom'
@@ -9,8 +9,8 @@ export const Productlist = ({stores}) => (
     <ul>
          { 
             stores.map( (store ,index) => 
-            <Link to={`/store/details/${store._id}`}>
-              <li key={store.id}>
+            <Link to={`/store/details/${store._id}`} key={store._id}>
+              <li>
                 <div className={styles.store}>
                   <div className={styles.storeIMG} className={styles.thumb}>
                     <img className={styles.storeIMG} src={store.imgURL}></img>

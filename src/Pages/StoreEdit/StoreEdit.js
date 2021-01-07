@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { storeService } from '../../services/storeService';
 import { addStore, updateStore } from '../../store/actions/storeActions'
-import './StoreEdit.module.scss';
+import './StoreEdit.scss';
 
-class _StoreEdit extends React.Component {
+class _StoreEdit extends Component {
   state = {
     store: {
       name: '',
@@ -20,7 +20,8 @@ class _StoreEdit extends React.Component {
   async componentDidMount() {
     console.log('edit');
     const { id } = this.props.match.params
-    const store = id ? await storeService.getProductById(id) : storeService.getEmptyStore()
+    console.log('id from params', id);
+    const store = id ? await storeService.getStoreById(id) : storeService.getEmptyStore()
     if (store) this.setState({ store })
     else this.setState({ errMsg: 'Store not found!' })
   }
@@ -47,7 +48,7 @@ class _StoreEdit extends React.Component {
     const { errMsg } = this.state
     const { name, description, imgURL, createdBy, createdDate, tags, products } = this.state.store
     return (
-      <form onSubmit={this.onSaveStore} className="product-edit">
+      <form onSubmit={this.onSaveStore} className="store-edit flex">
         <label>Name:</label>
         <input type="text" name="name" value={name} onChange={this.handleChange} />
         <label>Description:</label>
@@ -55,7 +56,7 @@ class _StoreEdit extends React.Component {
         <label>Store img:</label>
         <img src="" alt="" />
         <label>Created by:</label>
-        <input type="text" name="craetedBy" value={createdBy} onChange={this.handleChange} />
+        <input type="text" name="createdBy" value={createdBy} onChange={this.handleChange} />
         <label>Created At:</label>
         <span>{createdDate}</span>
         <label>Tags:</label>

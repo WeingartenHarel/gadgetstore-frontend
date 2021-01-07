@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import styles from './StoreDetail.module.scss';
 import { storeService } from '../../services/storeService.js'
+import { Link } from 'react-router-dom';
 
 export class StoreDetail extends Component {
   
@@ -39,7 +40,9 @@ export class StoreDetail extends Component {
                 </li>)
               }   
             </ul>
-          </div>}
+            <Link to={'/store/edit/'+ store._id}>Edit</Link>
+          </div>
+          }
       </div>
     )
 

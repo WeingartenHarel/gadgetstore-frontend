@@ -1,8 +1,8 @@
-.Productlist {
- 
+.StoreList {
+    display: flex;
+    justify-content: center;
     ul{
         display:flex;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         flex-direction: row;
@@ -11,8 +11,8 @@
         
         li{
             display: flex;
-            // align-items: center;
-            // justify-content: center;   
+            align-items: center;
+            justify-content: center;   
 
             padding: 10px;
             background-color: aliceblue;
@@ -25,9 +25,6 @@
                 justify-content: center;
                 position: relative;
 
-                justify-content: start;
-                align-items: center;
-                
                 .storeIMG{
                     object-fit: contain;
                     height: 300px;

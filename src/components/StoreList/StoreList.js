@@ -1,12 +1,12 @@
 import React from 'react';
-// import ProductPreview from '../ProductPreview/ProductPreview';
+import ProductPreview from '../ProductPreview/ProductPreview';
 // import PropTypes from 'prop-types';
-import styles from './Productlist.module.scss';
+import styles from './StoreList.module.scss';
 import { Link } from 'react-router-dom'
 
-export const Productlist = ({stores}) => (
-  <div className={styles.Productlist}>
-    <ul> 
+export const StoreList = ({stores}) => (
+  <div className={styles.StoreList}>
+    <ul>
          { 
             stores.map( (store ,index) => 
             <Link to={`/store/details/${store._id}`} key={store._id}>
@@ -26,7 +26,7 @@ export const Productlist = ({stores}) => (
                 </div>   
               </li> 
             </Link>
-              )
+          )
          }
     </ul>
   </div>

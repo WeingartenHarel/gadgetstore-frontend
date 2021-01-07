@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Homepage.module.scss';
-import { Productlist } from '../../components/Productlist/Productlist';
+import { StoreList } from '../../components/StoreList/StoreList';
 import { storeService } from '../../services/storeService.js'
+
 
 
 export default class HomePage extends React.Component {
@@ -29,7 +30,7 @@ export default class HomePage extends React.Component {
       <div className="home-page">
         { products &&
         <div className="products-section">
-          <Productlist stores={products}></Productlist>
+          <StoreList stores={products}></StoreList>
         </div>
         }
       </div>

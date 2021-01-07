@@ -1,0 +1,67 @@
+.StoreList {
+    display: flex;
+    justify-content: center;
+    ul{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap:10px;
+
+        
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;   
+
+            padding: 10px;
+            background-color: aliceblue;
+            list-style: none;
+            width: 300px;
+            height: 300px;
+
+            .store{
+
+                justify-content: center;
+                position: relative;
+
+                .storeIMG{
+                    object-fit: contain;
+                    height: 300px;
+                    width: 300px;
+                    position: absolute;
+                    z-index: 0;
+                }
+                .text{
+                    z-index: 1;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    grid-gap: 12px;
+                    gap: 172px;
+  
+                    span{
+                        background-color: #000000c7;
+                        font-size: 2em;
+                        padding: 10px;
+                        color: #fff;
+                    }
+                }
+                .thumb{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 300px;
+                    width: 300px;
+                }
+            }
+            .info{
+                position: relative;
+                bottom: -20px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}

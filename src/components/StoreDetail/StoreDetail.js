@@ -26,6 +26,7 @@ export class StoreDetail extends Component {
             <h2>{store.name}</h2>
             <span>Owner: {store.createdBy}</span>
             <span>"{store.description}"</span>
+            <h4> Product List</h4>
             <ul >
             {store.products.map( (product ,index) =>
               <li key={index}>

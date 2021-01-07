@@ -4,7 +4,7 @@ import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import Homepage from './Pages/Homepage/Homepage';
 import AppHeader from './components/AppHeader/AppHeader'
 import { StoreEdit } from './Pages/StoreEdit/StoreEdit';
-import StoreDetail from './components/StoreDetail/StoreDetail';
+import {StoreDetail} from './components/StoreDetail/StoreDetail';
 
 function App() {
 

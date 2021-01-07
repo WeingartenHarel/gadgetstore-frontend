@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import styles from './StoreDetail.module.scss';
 import { storeService } from '../../services/storeService.js'
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { loadStores} from '../../store/actions/storeActions'
 
-export class StoreDetail extends Component {
+class _storeDetail extends Component {
   
   state = {
     store:null,
@@ -49,8 +51,13 @@ export class StoreDetail extends Component {
 
   }
 }
-StoreDetail.propTypes = {};
+// StoreDetail.propTypes = {};
 
-StoreDetail.defaultProps = {};
+// StoreDetail.defaultProps = {};
 
-export default StoreDetail;
+
+const mapDispatchToProp = {
+  loadStores
+}
+
+export const StoreDetail = connect(null, mapDispatchToProp)(_storeDetail)

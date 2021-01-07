@@ -21,8 +21,8 @@
            
                     li{
                         display: flex;
-                        align-items: center;
-                        justify-content: center;
+                        // align-items: center;
+                        // justify-content: center;
                         list-style: none;
                         background-color: antiquewhite;
                         padding: 10px;
@@ -31,7 +31,7 @@
                         .store{
                             display: flex;
                             flex-direction: column;
-                            justify-content: center;
+                            justify-content: start;
                             align-items: center;
 
                             span{

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 export const Productlist = ({stores}) => (
   <div className={styles.Productlist}>
-    <ul>
+    <ul> 
          { 
             stores.map( (store ,index) => 
             <Link to={`/store/details/${store._id}`} key={store._id}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductPreview from '../ProductPreview/ProductPreview';
+// import ProductPreview from '../ProductPreview/ProductPreview';
 // import PropTypes from 'prop-types';
 import styles from './Productlist.module.scss';
 import { Link } from 'react-router-dom'
